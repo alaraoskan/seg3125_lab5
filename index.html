@@ -133,9 +133,21 @@
                             <input type="text" placeholder="Jane Doe" name="name" required><br><br>
                         <h6>Email <span class="ui-icon ui-icon-mail-closed"></span></h6>
                             <input type="email" placeholder="xyz@email.com" name="email" required><br><br>
+                                  <small class="invalid-feedback" id="inputEmail-invalidfeedback">
+                                     Please enter a valid email address.
+                                 </small>
+                                 <small class="valid-feedback" id="inputEmail-validfeedback">
+                                     Thank you!
+                                 </small>
                         <h6>Telephone <span class="ui-icon ui-icon-calculator"></span></h6>
                             <input type="tel" placeholder="343-456-7890" name="telephone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required><br><br>
-                            <h6>Gender</h6>
+                            <small class="invalid-feedback" id="inputPhone-invalidfeedback">
+                                     Please enter a valid phone number in the format of (xxx)-xxx-xxxx, where dashes & parenthesis are optional.
+                                 </small>
+                                 <small class="valid-feedback" id="inputPhone-validfeedback">
+                                     Perfect!
+                                 </small>
+                        <h6>Gender</h6>
                             <select name="Gender">
                                 <option>Female<span class="ui-icon ui-icon-person"></span></option>
                                 <option>Male<span class="ui-icon ui-icon-person"></span></option>
@@ -290,7 +302,7 @@
                         <label for="Griffin">Stewie Griffin<span class="ui-icon ui-icon-scissors"></span></label><br>
                         <input type="radio" id="Bevis_and_Butthead" name="hs" value="Bevis and Butthead">
                         <label for="Butthead">Bevis and Butthead<span class="ui-icon ui-icon-scissors"></span></label><br><br>
-                        
+                        <small class="text-muted">If this is your first time with us, indicate No Preference.</small>
                            <h6>Choose a day<span class="ui-icon ui-icon-calendar"></span></h6>
                                 <input type="date" name="date" min="2021-07-01"><br><br>
                             <h6>Choose a time<span class="ui-icon ui-icon-clock"></span></h6>
@@ -380,6 +392,10 @@
                             </div>
                             <label for="cname">Name on Card</label>
                             <input type="text" id="cname" name="cardname" placeholder="John More Doe"><br><br>
+                                  <small class="text-muted">Full name as its displayed on your card.</small>
+                                         <div class="invalid-feedback">
+                                         Name on card is required
+                                         </div>
                             <label for="ccnum">Credit card number</label>
                             <input type="number" id="ccnum" name="cardnumber" placeholder="1111222233334444"><br><br>
                             <div class="row">
