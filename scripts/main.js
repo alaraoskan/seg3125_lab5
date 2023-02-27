@@ -69,7 +69,7 @@ function validateForm() {
     formValid = true;
   }
 
-  if((document.theform.hs1.checked || document.theform.hs2.checked ) == false) {
+  if((document.theform.hs1.checked || document.theform.hs2.checked || document.theform.hs3.checked ) == false) {
     alert('You must choose a hairstylist');
     formValid = false;
     return formValid;
@@ -77,11 +77,13 @@ function validateForm() {
     if(document.theform.hs1.checked) {
       vet = document.theform.hs1.value;
       formValid = true;
-    } else if (document.theform.hs2.checked) 
+    } else if (document.theform.hs2.checked) {
       vet = document.theform.hs2.value;
       formValid = true;
-    
-  }
+     } else if (document.theform.hs3.checked){ 
+      vet = document.theform.hs2.value;
+      formValid = true;
+  }}
 
   if(!document.theform.date.value) {
     alert('You must choose a date for your visit');
