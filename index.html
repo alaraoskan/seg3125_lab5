@@ -11,14 +11,14 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link href="styles/styles.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Module 4 Lab</title>
+    <link rel="stylesheet" href="./scripts/jquery-ui/jquery-ui.min.css">
 </head>
 
 <body>
 
     <ul class="nav justify-content-end bg-dark text-light">
         <li class="nav-item">
-            <h4><a class="nav-link" href="#">info@queenscoiffure.ca</a></h4>
+            <h4  class="demoHeaders"><a class="nav-link" href="#">info@queenscoiffure.ca</a></h4>
         </li>
         <li class="nav-item">
             <h4><a class="nav-link" href="#Appointments">Find Us</a></h4>
@@ -129,17 +129,17 @@
                 </div>
                 <div class="modal-body">
                     <form name="theform" action="/action_page.php">
-                        <h6>Full Name</h6>
-                            <input type="text" placeholder="Jane Doe" name="name"><br><br>
-                        <h6>Email</h6>
-                            <input type="email" placeholder="xyz@email.com" name="email"><br><br>
-                        <h6>Tel</h6>
-                            <input type="tel" placeholder="343-456-7890" name="telephone"><br><br>
+                        <h6>Full Name <span class="ui-icon ui-icon-person"></span></h6>
+                            <input type="text" placeholder="Jane Doe" name="name" required><br><br>
+                        <h6>Email <span class="ui-icon ui-icon-mail-closed"></span></h6>
+                            <input type="email" placeholder="xyz@email.com" name="email" required><br><br>
+                        <h6>Telephone <span class="ui-icon ui-icon-calculator"></span></h6>
+                            <input type="tel" placeholder="343-456-7890" name="telephone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required><br><br>
                             <h6>Gender</h6>
                             <select name="Gender">
-                                <option>Female</option>
-                                <option>Male</option>
-                                <option>Other</option>
+                                <option>Female<span class="ui-icon ui-icon-person"></span></option>
+                                <option>Male<span class="ui-icon ui-icon-person"></span></option>
+                                <option>Other<span class="ui-icon ui-icon-person"></span></option>
                             </select><br><br>
                             <style>
                                 .container {
@@ -256,14 +256,14 @@
                                 <span class="checkmark"></span>
                         </label><br><br>
                         <h6>Choose a member of our team</h6>
-                        <input type="radio" id="Stewie Griffin" name="hs1" value="Stewie Griffin">
-                        <label for="Griffin">Stewie Griffin</label><br>
-                        <input type="radio" id="Bevis and Butthead" name="hs2" value="Bevis and Butthead">
-                        <label for="Butthead">Bevis and Butthead</label><br><br>
+                        <input type="radio" id="Stewie_Griffin" name="hs" value="Stewie Griffin">
+                        <label for="Griffin">Stewie Griffin<span class="ui-icon ui-icon-scissors"></span></label><br>
+                        <input type="radio" id="Bevis_and_Butthead" name="hs" value="Bevis and Butthead">
+                        <label for="Butthead">Bevis and Butthead<span class="ui-icon ui-icon-scissors"></span></label><br><br>
                         
-                           <h6>Choose a day</h6>
+                           <h6>Choose a day<span class="ui-icon ui-icon-calendar"></span></h6>
                                 <input type="date" name="date" min="2021-07-01"><br><br>
-                            <h6>Choose a time</h6>
+                            <h6>Choose a time<span class="ui-icon ui-icon-clock"></span></h6>
                             <select name="time">
                                 <option>8:00am</option>
                                 <option>8:30am</option>
@@ -380,7 +380,7 @@
                 <p class="card-text">
                     Stewie got his hair styling licence in the fall of 2021 and loves to style long hairs!
                 </p>
-                <button type="button" class="btn btn-secondary btn-lg" data-toggle="modal" data-target="#exampleModal">Book me!</button>
+                <button type="button" class="btn btn-secondary btn-lg" data-toggle="modal" data-target="#modal" onclick="myFunction('s')">Book me!</button>
             </div>
         </div>
         <div class="card my-4 p-0" style="width: 18rem;">
@@ -391,7 +391,7 @@
                 <p class="card-text">
                     Bevis and Butthead comes in a pair of two who both loves to cut hair of all styles!
                 </p>
-                <button type="button" class="btn btn-secondary btn-lg" data-toggle="modal" data-target="#exampleModal">Book me!</button>
+                <button type="button" class="btn btn-secondary btn-lg" data-toggle="modal" data-target="#modal" onclick="myFunction('bb')">Book me!</button>
             </div>
         </div>
 
@@ -447,6 +447,7 @@
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="./scripts/jquery-ui/jquery-ui.min.js"></script>
 <script src="scripts/main.js"></script> 
 </body>
 </html>

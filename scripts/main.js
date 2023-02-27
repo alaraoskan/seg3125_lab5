@@ -70,7 +70,7 @@ function validateForm() {
   }
 
   if((document.theform.hs1.checked || document.theform.hs2.checked ) == false) {
-    alert('You must choose a veterinarian');
+    alert('You must choose a hairstylist');
     formValid = false;
     return formValid;
   } else {
@@ -192,5 +192,18 @@ function validatePayment() {
   } else {
     $('#paymentModal').modal('show');
     return formValid;
+  }
+}
+
+
+function myFunction(id) {
+  if (id == "s") {
+    console.log('s');
+    $("#Stewie_Griffin").prop("checked", true);
+
+  }
+  else {
+    console.log('bb');
+    $("#Bevis_and_Butthead").prop("checked", true);
   }
 }
